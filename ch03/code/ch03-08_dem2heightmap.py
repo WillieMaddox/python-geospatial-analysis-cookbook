@@ -4,19 +4,19 @@ import subprocess
 from osgeo import gdal
 import math
 
-# path_base = "../geodata/"
-path_base = "c:/00_GOMOGI/geodata/"
+path_base = "../../geodata/"
+# path_base = "c:/00_GOMOGI/geodata/"
 
 # for windows users
-command_gdal_translate = "c:/OSGeo4W/bin/gdal_translate.exe"
-command_gdalinfo = "c:/OSGeo4W/bin/gdalinfo.exe"
-command_gdaldem = "c:/OSGeo4w/bin/gdaldem.exe"
+#command_gdal_translate = "c:/OSGeo4W/bin/gdal_translate.exe"
+#command_gdalinfo = "c:/OSGeo4W/bin/gdalinfo.exe"
+#command_gdaldem = "c:/OSGeo4w/bin/gdaldem.exe"
 
 # for linux users or users with gdal utilities on your sys path
-# command_gdal_translate = "gdal_translate"
-# command_gdalwarp = "gdalwarp"
-# command_gdalinfo = "gdalinfo"
-# command_gdaldem = "gdaldem"
+command_gdal_translate = "gdal_translate"
+command_gdalwarp = "gdalwarp"
+command_gdalinfo = "gdalinfo"
+command_gdaldem = "gdaldem"
 
 orig_dem_asc = path_base + "ALS_DGM_10m.asc"
 orig_dem_asc = path_base + "dem-5000.asc"

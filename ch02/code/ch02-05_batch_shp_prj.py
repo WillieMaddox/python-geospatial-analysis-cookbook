@@ -89,4 +89,4 @@ def run_batch_define_prj(folder_location, epsg):
 
 # Windows users please use the full path
 # Linux users can also use full path        
-run_batch_define_prj("c:/02_DEV/01_projects/04_packt/ch02/geodata/no_prj/", 4326)
+run_batch_define_prj("/vagrant/ch02/geodata/no_prj/", 4326)
