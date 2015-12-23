@@ -54,6 +54,18 @@ pip install django
 pip install owslib
 pip install folium
 pip install jinja2
+pip install djangorestframework==3.1.3
 toggleglobalsitepackages
 enable global site-packages
 
+sudo su - postgres
+psql -U postgres -c "CREATE USER pluto WITH ENCRYPTED PASSWORD 'stars';"
+psql -U postgres -c "CREATE DATABASE py_geoan_cb WITH OWNER=pluto;"
+psql –U postgres -d py_geoan_cb -c "CREATE EXTENSION postgis;"
+psql -d py_geoan_cb -c "CREATE SCHEMA geodata AUTHORIZATION pluto;"
+#python ch03-01_shp2pg.py
+cd /vagrant/ch03
+ogr2ogr -f "ESRI Shapefile" geodata/temp PG:"host=localhost user=pluto dbname=py_geoan_cb password=stars" bikeways highest_mountains
+cd code
+python ch03-01_shp2pg.py
+logout

@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
 
     #### third party apps
     'rest_framework',
@@ -85,7 +86,7 @@ WSGI_APPLICATION = 'web_analysis.wsgi.application'
 DATABASES = {
     'default': {
         # Postgresql with PostGIS
-        # 'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        #'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'py_geoan_cb', # DB name
         'USER': 'saturn', # DB user name
@@ -99,7 +100,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-US'
 
 TIME_ZONE = 'UTC'
 
