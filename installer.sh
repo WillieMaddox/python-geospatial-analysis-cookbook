@@ -15,12 +15,12 @@ apt-get install -qy python-pip
 pip install pip --upgrade
 
 #gdal install
-apt-get install -qy libxml2-dev libxslt1-dev libpq-dev
+apt-get install -qy libxml2-dev libxslt1-dev libtiff-dev
 apt-get install -qqy libgdal-dev  # install is 125MB
 apt-get install -qqy gdal-bin python-gdal
 
 #install postgresql postgis
-apt-get install -qqy postgresql-9.3 postgresql-9.3-postgis-2.1 pgadmin3 postgresql-contrib python-psycopg2
+apt-get install -qqy postgresql-9.3 postgresql-9.3-postgis-2.1 pgadmin3 postgresql-contrib python-psycopg2 libpq-dev
 apt-get install -qqy binutils libproj-dev
 
 #workon pygeoan_cb
@@ -42,5 +42,4 @@ pip install owslib
 pip install folium
 pip install jinja2
 pip install djangorestframework==3.1.3
-
 
