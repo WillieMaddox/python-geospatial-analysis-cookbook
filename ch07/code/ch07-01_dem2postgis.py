@@ -5,7 +5,7 @@ import psycopg2
 
 db_host = "localhost"
 db_user = "pluto"
-db_passwd = "secret"
+db_passwd = "stars"
 db_database = "py_geoan_cb"
 db_port = "5432"
 

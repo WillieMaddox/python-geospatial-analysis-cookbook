@@ -6,19 +6,56 @@ This document is where I put any discrepancies I find in the book, Python Geospa
 
 page 1
 Neither PySAL nor IPython are used anywhere throughout this book.
+Either their usage should be demonstrated, or they should go to the back
+of the book in the Appendix with the rest of the unused goodies.
+
+In downloadable code, ch01/code/installer.sh
+mkvirtualenv pygeo_analysis_cookbook
+should read
+mkvirtualenv pygeoan_cb
+
+page 17
+"enable global site-packages" needs to be removed from installer.sh.
+
+page 67
+8. Let's run our new ch03-08_dem2heightmap.py script from the command line:
+subprocess.call(tif_2_envi.split(),shell=False)
+9. Let's run our new ch03-08_dem2heightmap.py script from the command line:
+python ch03-08_dem2heightmap.py
+
+probably should read,
+
+subprocess.call(tif_2_envi.split(),shell=False) <-- not in bold
+8. Let's run our new ch03-08_dem2heightmap.py script from the command line:
+python ch03-08_dem2heightmap.py
+
+page 128
+source venvs/pygeo_analysis_cookbook/bin/activate
+should read
+source venvs/pygeoan_cb/bin/activate
 
 page 145
 The username for pluto suddenly changes from "stars" to "secret".
 See also pages 165, 167, 177, and 195.
 
+############
+### ch08 ###
+############
 
+Is geodata.ch08_e02_networklines_routing (as prescribed in the code)
+the same as geodata.ch08_e02_networklines_vertices_pgr (as prescribed in the text)?
 
-page 222 cant find the following file.
+page 222
+Can't find the following file:
 state_unemployment = r'../www/html/US_Unemployment_Oct2012.csv'
 
 ############
 ### ch11 ###
 ############
+
+page 241, step 7.
+It is not clear why we need to create a new user named 'saturn'.
+An explanation for why we can not use 'pluto' here would be very helpful.
 
 page 241, step 9.
 ALTER ROLE saturn SET search_path = django, geodata, public, topology;
@@ -35,5 +72,21 @@ Need to touch __init__.py in maps folder before this line will work.
 page 243
 "We also need to let our new database user named saturn in order to have access to the 
 tables located in the PostgreSQL geodata schema created in Chapter 8, Network Routing Analysis."
-
 We need to let saturn do what?
+
+geodata.ch08_e01_networklines_vertices_pgr
+and
+geodata.ch08_e02_networklines_vertices_pgr
+do not appear to exist at this stage. Should they?
+page 253
+name='route-map' or 'routemap'?
+the first appears in the pdf, the second appears in the code.
+
+
+page 267, step 1
+Where is e01_room_data.shp?
+
+page 267, step 2
+Where is e02_room_data.shp?
+
+

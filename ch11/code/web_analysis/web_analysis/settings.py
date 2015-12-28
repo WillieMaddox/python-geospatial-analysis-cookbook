@@ -86,11 +86,13 @@ WSGI_APPLICATION = 'web_analysis.wsgi.application'
 DATABASES = {
     'default': {
         # Postgresql with PostGIS
-        #'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'py_geoan_cb', # DB name
-        'USER': 'saturn', # DB user name
-        'PASSWORD': 'secret', # DB user password
+        #'USER': 'saturn', # DB user name
+        #'PASSWORD': 'secret', # DB user password
+        'USER': 'pluto', # DB user name
+        'PASSWORD': 'stars', # DB user password
         'HOST': 'localhost',
         'PORT': '5432',
     }
