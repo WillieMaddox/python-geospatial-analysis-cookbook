@@ -14,8 +14,16 @@ mkvirtualenv pygeo_analysis_cookbook
 should read
 mkvirtualenv pygeoan_cb
 
+page 2
+Under "Getting ready" it would be nice to provide a Vagrantfile with the code
+and have it provision ch01/code/installer.sh
+
 page 17
 "enable global site-packages" needs to be removed from installer.sh.
+
+############
+### ch03 ###
+############
 
 page 67
 8. Let's run our new ch03-08_dem2heightmap.py script from the command line:
@@ -29,10 +37,18 @@ subprocess.call(tif_2_envi.split(),shell=False) <-- not in bold
 8. Let's run our new ch03-08_dem2heightmap.py script from the command line:
 python ch03-08_dem2heightmap.py
 
+############
+### ch06 ###
+############
+
 page 128
 source venvs/pygeo_analysis_cookbook/bin/activate
 should read
 source venvs/pygeoan_cb/bin/activate
+
+############
+### ch07 ###
+############
 
 page 145
 The username for pluto suddenly changes from "stars" to "secret".
@@ -62,7 +78,7 @@ ALTER ROLE saturn SET search_path = django, geodata, public, topology;
 should be in bold type.
 
 page 242, step 10.
-This isn't really a step telling the user to do anything.
+This isn't really a step telling the reader to do anything.
 Suggest appending the contents of this step to the previous step.
 
 page 242, step 11.
@@ -78,11 +94,46 @@ geodata.ch08_e01_networklines_vertices_pgr
 and
 geodata.ch08_e02_networklines_vertices_pgr
 do not appear to exist at this stage. Should they?
+
 page 253
 name='route-map' or 'routemap'?
-the first appears in the pdf, the second appears in the code.
+The first appears in the pdf, the second appears in the code. Which is correct?
 
+This line is confusing,
+Next, register your new app in the /web_analysis/web_analysis/settings.py
+INSTALLED APPS variable by adding this under the api entry 'maps' , under the entry 'api' .
+Suggest changing it to something like,
+Next, register your new app in the /web_analysis/web_analysis/settings.py
+by adding 'maps' under the entry 'api' in the INSTALLED APPS variable.
 
+page 254
+Under "How to do it...", The authors say, "We use the built-in Django
+template engine to build two HTML pages."  It would be nice to see how the
+authors used the template engine to create said html files rather than just
+printing showing us the result.
+
+page 258, step 3
+Consider changing the following, maps/views.py.
+#################################################
+For our application to actually show these templates, we need to create a view. The
+view handles the request and serves route-map.html in return. Now, our simple
+view is complete:
+from django.shortcuts import render
+def route_map(request):
+    return render(request, 'route-map.html')
+#################################################
+to,
+#################################################
+For our application to actually show these templates, we need to create a view. The
+view handles the request and serves route-map.html in return. Fill in the contents
+of maps/views.py as follows:
+from django.shortcuts import render
+def route_map(request):
+    return render(request, 'route-map.html')
+Now, our simple view is complete.
+#################################################
+
+book 
 page 267, step 1
 Where is e01_room_data.shp?
 
