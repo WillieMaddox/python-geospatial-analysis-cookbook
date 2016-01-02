@@ -3,7 +3,6 @@
 # Edit the following to change the name of the database user that will be created:
 APP_DB_USER=pluto
 APP_DB_PASS=stars
-# Edit the following to change the name of the database that is created:
 APP_DB_NAME=py_geoan_cb
 
 cat << EOF | su - postgres -c psql

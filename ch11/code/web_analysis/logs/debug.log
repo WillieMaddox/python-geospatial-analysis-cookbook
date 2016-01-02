@@ -1,3 +1,5 @@
+[23/Dec/2015 23:13:13] DEBUG [api.views:27] now running function find_closest_network_node
+[23/Dec/2015 23:17:00] DEBUG [api.views:27] now running function find_closest_network_node
 [25/Dec/2015 06:34:25] DEBUG [api.views:27] now running function find_closest_network_node
 [25/Dec/2015 06:34:25] DEBUG [api.views:27] now running function find_closest_network_node
 [25/Dec/2015 06:39:55] DEBUG [api.views:27] now running function find_closest_network_node

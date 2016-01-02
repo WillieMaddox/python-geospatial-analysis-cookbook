@@ -19,6 +19,7 @@ pip install urllib3[secure]
 pip install numpy -q --upgrade
 
 #gdal install
+apt-get install -qy libxml2-dev libxslt1-dev libtiff-dev
 apt-get install -qqy libgdal-dev gdal-bin python-gdal
 
 #install postgresql postgis
@@ -27,7 +28,6 @@ apt-get install -qqy postgresql-9.4-postgis-2.1 postgresql-9.4-pgrouting postgis
 apt-get install -qqy binutils libproj-dev libpq-dev
 
 service postgresql restart
-
 
 #workon pygeoan_cb
 pip install pyproj -q

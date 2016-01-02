@@ -13,6 +13,9 @@ APP_DB_NAME=py_geoan_cb
 cat << EOF | su - postgres -c "psql -d $APP_DB_NAME"
 CREATE SCHEMA django AUTHORIZATION $APP_DB_USER;
 ALTER ROLE $APP_DB_USER SET search_path = django, geodata, public, topology;
+CREATE ROLE gis_edit VALID UNTIL 'infinity';
+GRANT ALL ON SCHEMA geodata TO GROUP gis_edit;
+GRANT gis_edit TO $APP_DB_USER;
 EOF
 
 cd /vagrant/ch11/code/web_analysis

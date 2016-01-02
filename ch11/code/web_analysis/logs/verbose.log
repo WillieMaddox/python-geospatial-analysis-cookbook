@@ -537,6 +537,90 @@
                 AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
                 AND pg_catalog.pg_table_is_visible(c.oid); args=None
 [23/Dec/2015 21:01:32] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[23/Dec/2015 22:27:11] DEBUG [django.db.backends:89] (0.004) 
+[23/Dec/2015 22:27:11] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[23/Dec/2015 22:32:47] DEBUG [django.db.backends:89] (0.008) 
+[23/Dec/2015 22:51:10] WARNING [django.request:182] Not Found: /maps/
+[23/Dec/2015 22:51:10] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[23/Dec/2015 22:51:10] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'api.urls' from '/vagrant/ch11/code/web_analysis/api/urls.pyc'> (None:None) ^api/>"
+[23/Dec/2015 22:51:31] DEBUG [django.template:923] Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [is_popup] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f4c8a693cf8>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f4c8a66d5d0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f4c8a634c90>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f4c8a66d490>, u'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>}, {}, {'app_path': u'/admin/login/?next=/admin/', 'available_apps': [], 'site_name': '127.0.0.1:8000', 'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'title': u'Log in', 'site_header': <django.utils.functional.__proxy__ object at 0x7f4c9b7474d0>, 'site': <django.contrib.sites.requests.RequestSite object at 0x7f4c8a686490>, 'next': u'/admin/', 'site_title': <django.utils.functional.__proxy__ object at 0x7f4c9b747490>, u'LANGUAGE_CODE': 'en-US', 'has_permission': False, 'site_url': '/', u'LANGUAGE_BIDI': False}]"
+[23/Dec/2015 22:51:31] DEBUG [django.template:923] Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [is_popup] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f4c8a693cf8>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f4c8a66d5d0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f4c8a634c90>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f4c8a66d490>, u'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>}, {}, {'app_path': u'/admin/login/?next=/admin/', 'available_apps': [], 'site_name': '127.0.0.1:8000', 'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'title': u'Log in', 'site_header': <django.utils.functional.__proxy__ object at 0x7f4c9b7474d0>, 'site': <django.contrib.sites.requests.RequestSite object at 0x7f4c8a686490>, 'next': u'/admin/', 'site_title': <django.utils.functional.__proxy__ object at 0x7f4c9b747490>, u'LANGUAGE_CODE': 'en-US', 'has_permission': False, 'site_url': '/', u'LANGUAGE_BIDI': False}]"
+[23/Dec/2015 22:52:01] DEBUG [django.db.backends:89] (0.005) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'saturn'; args=(u'saturn',)
+[23/Dec/2015 22:52:02] DEBUG [django.template:923] Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [is_popup] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f4c8a693de8>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f4c8a623510>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f4c8a640b90>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f4c8a623a90>, u'request': <WSGIRequest: POST '/admin/login/?next=/admin/'>}, {}, {'app_path': u'/admin/login/?next=/admin/', 'available_apps': [], 'site_name': '127.0.0.1:8000', 'form': <AdminAuthenticationForm bound=True, valid=False, fields=(username;password)>, 'title': u'Log in', 'site_header': <django.utils.functional.__proxy__ object at 0x7f4c9b7474d0>, 'site': <django.contrib.sites.requests.RequestSite object at 0x7f4c9bae1b50>, 'next': u'/admin/', 'site_title': <django.utils.functional.__proxy__ object at 0x7f4c9b747490>, u'LANGUAGE_CODE': 'en-US', 'has_permission': False, 'site_url': '/', u'LANGUAGE_BIDI': False}]"
+[23/Dec/2015 22:52:02] DEBUG [django.template:923] Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [is_popup] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f4c8a693de8>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f4c8a623510>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f4c8a640b90>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f4c8a623a90>, u'request': <WSGIRequest: POST '/admin/login/?next=/admin/'>}, {}, {'app_path': u'/admin/login/?next=/admin/', 'available_apps': [], 'site_name': '127.0.0.1:8000', 'form': <AdminAuthenticationForm bound=True, valid=False, fields=(username;password)>, 'title': u'Log in', 'site_header': <django.utils.functional.__proxy__ object at 0x7f4c9b7474d0>, 'site': <django.contrib.sites.requests.RequestSite object at 0x7f4c9bae1b50>, 'next': u'/admin/', 'site_title': <django.utils.functional.__proxy__ object at 0x7f4c9b747490>, u'LANGUAGE_CODE': 'en-US', 'has_permission': False, 'site_url': '/', u'LANGUAGE_BIDI': False}]"
+[23/Dec/2015 22:52:16] DEBUG [django.template:923] Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [is_popup] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f4c8a8fbb90>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f4c9bae1e50>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f4c8a607fd0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f4c8a5de190>, u'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>}, {}, {'app_path': u'/admin/login/?next=/admin/', 'available_apps': [], 'site_name': '127.0.0.1:8000', 'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'title': u'Log in', 'site_header': <django.utils.functional.__proxy__ object at 0x7f4c9b7474d0>, 'site': <django.contrib.sites.requests.RequestSite object at 0x7f4c8a686f10>, 'next': u'/admin/', 'site_title': <django.utils.functional.__proxy__ object at 0x7f4c9b747490>, u'LANGUAGE_CODE': 'en-US', 'has_permission': False, 'site_url': '/', u'LANGUAGE_BIDI': False}]"
+[23/Dec/2015 22:52:16] DEBUG [django.template:923] Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [is_popup] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f4c8a8fbb90>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f4c9bae1e50>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f4c8a607fd0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f4c8a5de190>, u'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>}, {}, {'app_path': u'/admin/login/?next=/admin/', 'available_apps': [], 'site_name': '127.0.0.1:8000', 'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'title': u'Log in', 'site_header': <django.utils.functional.__proxy__ object at 0x7f4c9b7474d0>, 'site': <django.contrib.sites.requests.RequestSite object at 0x7f4c8a686f10>, 'next': u'/admin/', 'site_title': <django.utils.functional.__proxy__ object at 0x7f4c9b747490>, u'LANGUAGE_CODE': 'en-US', 'has_permission': False, 'site_url': '/', u'LANGUAGE_BIDI': False}]"
+[23/Dec/2015 22:52:24] WARNING [django.request:182] Not Found: /api/
+[23/Dec/2015 22:52:24] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[23/Dec/2015 22:52:24] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'maps.urls' from '/vagrant/ch11/code/web_analysis/maps/urls.pyc'> (None:None) ^maps/>"
+[23/Dec/2015 22:56:00] WARNING [django.request:182] Not Found: /api/directions/1587848.414,5879564.080,2&1588005.547,5879736.039,2
+[23/Dec/2015 22:56:00] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[23/Dec/2015 22:56:00] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'maps.urls' from '/vagrant/ch11/code/web_analysis/maps/urls.pyc'> (None:None) ^maps/>"
+[23/Dec/2015 22:56:01] WARNING [django.request:182] Not Found: /favicon.ico
+[23/Dec/2015 22:56:01] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[23/Dec/2015 22:56:01] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'api.urls' from '/vagrant/ch11/code/web_analysis/api/urls.pyc'> (None:None) ^api/>"
+[23/Dec/2015 22:56:01] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'maps.urls' from '/vagrant/ch11/code/web_analysis/maps/urls.pyc'> (None:None) ^maps/>"
+[23/Dec/2015 23:00:56] DEBUG [django.db.backends:89] (0.005) 
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.002) 
             SELECT c.relname, c.relkind
             FROM pg_catalog.pg_class c
@@ -552,12 +636,6 @@
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends.schema:101] ALTER TABLE "django_content_type" ADD CONSTRAINT "django_content_type_app_label_76bd3d3b_uniq" UNIQUE ("app_label", "model"); (params [])
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.002) ALTER TABLE "django_content_type" ADD CONSTRAINT "django_content_type_app_label_76bd3d3b_uniq" UNIQUE ("app_label", "model"); args=[]
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.001) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('contenttypes', '0001_initial', '2015-12-24T02:23:01.748225+00:00'::timestamptz) RETURNING "django_migrations"."id"; args=('contenttypes', u'0001_initial', datetime.datetime(2015, 12, 24, 2, 23, 1, 748225, tzinfo=<UTC>))
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends.schema:101] CREATE TABLE "auth_permission" ("id" serial NOT NULL PRIMARY KEY, "name" varchar(50) NOT NULL, "content_type_id" integer NOT NULL, "codename" varchar(100) NOT NULL); (params None)
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.004) CREATE TABLE "auth_permission" ("id" serial NOT NULL PRIMARY KEY, "name" varchar(50) NOT NULL, "content_type_id" integer NOT NULL, "codename" varchar(100) NOT NULL); args=None
@@ -612,12 +690,6 @@
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends.schema:101] CREATE INDEX "auth_user_user_permissions_8373b171" ON "auth_user_user_permissions" ("permission_id"); (params [])
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.002) CREATE INDEX "auth_user_user_permissions_8373b171" ON "auth_user_user_permissions" ("permission_id"); args=[]
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.002) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0001_initial', '2015-12-24T02:23:01.859796+00:00'::timestamptz) RETURNING "django_migrations"."id"; args=('auth', u'0001_initial', datetime.datetime(2015, 12, 24, 2, 23, 1, 859796, tzinfo=<UTC>))
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends.schema:101] CREATE TABLE "django_admin_log" ("id" serial NOT NULL PRIMARY KEY, "action_time" timestamp with time zone NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint NOT NULL CHECK ("action_flag" >= 0), "change_message" text NOT NULL, "content_type_id" integer NULL, "user_id" integer NOT NULL); (params None)
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.006) CREATE TABLE "django_admin_log" ("id" serial NOT NULL PRIMARY KEY, "action_time" timestamp with time zone NOT NULL, "object_id" text NULL, "object_repr" varchar(200) NOT NULL, "action_flag" smallint NOT NULL CHECK ("action_flag" >= 0), "change_message" text NOT NULL, "content_type_id" integer NULL, "user_id" integer NOT NULL); args=None
@@ -630,56 +702,102 @@
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends.schema:101] CREATE INDEX "django_admin_log_e8701ad4" ON "django_admin_log" ("user_id"); (params [])
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.002) CREATE INDEX "django_admin_log_e8701ad4" ON "django_admin_log" ("user_id"); args=[]
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.001) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[23/Dec/2015 22:34:28] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[23/Dec/2015 22:34:28] DEBUG [django.db.backends:89] (0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'logentry' AND "django_content_type"."app_label" = 'admin'); args=('logentry', 'admin')
+[23/Dec/2015 22:34:28] DEBUG [django.db.backends:89] (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+[23/Dec/2015 22:34:28] DEBUG [django.db.backends:89] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+[23/Dec/2015 22:34:28] DEBUG [django.db.backends:89] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'permission' AND "django_content_type"."app_label" = 'auth'); args=('permission', 'auth')
+[23/Dec/2015 22:34:28] DEBUG [django.db.backends:89] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'group' AND "django_content_type"."app_label" = 'auth'); args=('group', 'auth')
+[23/Dec/2015 22:34:28] DEBUG [django.db.backends:89] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'user' AND "django_content_type"."app_label" = 'auth'); args=('user', 'auth')
+[23/Dec/2015 22:34:28] DEBUG [django.db.backends:89] (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
+[23/Dec/2015 22:34:28] DEBUG [django.db.backends:89] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+[23/Dec/2015 22:34:28] DEBUG [django.db.backends:89] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'contenttype' AND "django_content_type"."app_label" = 'contenttypes'); args=('contenttype', 'contenttypes')
+[23/Dec/2015 22:34:28] DEBUG [django.db.backends:89] (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+[23/Dec/2015 22:34:28] DEBUG [django.db.backends:89] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+[23/Dec/2015 22:34:28] DEBUG [django.db.backends:89] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'session' AND "django_content_type"."app_label" = 'sessions'); args=('session', 'sessions')
+[23/Dec/2015 22:34:28] DEBUG [django.db.backends:89] (0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
+[23/Dec/2015 22:34:28] DEBUG [django.db.backends:89] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+[23/Dec/2015 22:36:36] DEBUG [django.db.backends:89] (0.004) 
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('admin', '0001_initial', '2015-12-24T02:23:01.893695+00:00'::timestamptz) RETURNING "django_migrations"."id"; args=('admin', u'0001_initial', datetime.datetime(2015, 12, 24, 2, 23, 1, 893695, tzinfo=<UTC>))
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends.schema:101] ALTER TABLE "django_admin_log" ALTER COLUMN "action_time" SET DEFAULT %s; (params [datetime.datetime(2015, 12, 24, 2, 23, 1, 907800, tzinfo=<UTC>)])
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.002) ALTER TABLE "django_admin_log" ALTER COLUMN "action_time" SET DEFAULT '2015-12-24T02:23:01.907800+00:00'::timestamptz; args=[datetime.datetime(2015, 12, 24, 2, 23, 1, 907800, tzinfo=<UTC>)]
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends.schema:101] ALTER TABLE "django_admin_log" ALTER COLUMN "action_time" DROP DEFAULT; (params [])
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.001) ALTER TABLE "django_admin_log" ALTER COLUMN "action_time" DROP DEFAULT; args=[]
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.001) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[23/Dec/2015 22:36:36] DEBUG [django.db.backends:89] (0.002) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[23/Dec/2015 22:36:36] DEBUG [django.db.backends:89] (0.001) 
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('admin', '0002_logentry_remove_auto_add', '2015-12-24T02:23:01.915022+00:00'::timestamptz) RETURNING "django_migrations"."id"; args=('admin', u'0002_logentry_remove_auto_add', datetime.datetime(2015, 12, 24, 2, 23, 1, 915022, tzinfo=<UTC>))
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends.schema:101] ALTER TABLE "django_content_type" ALTER COLUMN "name" DROP NOT NULL; (params [])
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.001) ALTER TABLE "django_content_type" ALTER COLUMN "name" DROP NOT NULL; args=[]
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends.schema:101] ALTER TABLE "django_content_type" DROP COLUMN "name" CASCADE; (params [])
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.001) ALTER TABLE "django_content_type" DROP COLUMN "name" CASCADE; args=[]
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.001) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[23/Dec/2015 22:36:36] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[23/Dec/2015 22:36:36] DEBUG [django.db.backends:89] (0.004) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'logentry' AND "django_content_type"."app_label" = 'admin'); args=('logentry', 'admin')
+[23/Dec/2015 22:36:36] DEBUG [django.db.backends:89] (0.003) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+[23/Dec/2015 22:36:36] DEBUG [django.db.backends:89] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+[23/Dec/2015 22:36:36] DEBUG [django.db.backends:89] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'permission' AND "django_content_type"."app_label" = 'auth'); args=('permission', 'auth')
+[23/Dec/2015 22:36:36] DEBUG [django.db.backends:89] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'group' AND "django_content_type"."app_label" = 'auth'); args=('group', 'auth')
+[23/Dec/2015 22:36:36] DEBUG [django.db.backends:89] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'user' AND "django_content_type"."app_label" = 'auth'); args=('user', 'auth')
+[23/Dec/2015 22:36:36] DEBUG [django.db.backends:89] (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
+[23/Dec/2015 22:36:36] DEBUG [django.db.backends:89] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+[23/Dec/2015 22:36:36] DEBUG [django.db.backends:89] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'contenttype' AND "django_content_type"."app_label" = 'contenttypes'); args=('contenttype', 'contenttypes')
+[23/Dec/2015 22:36:36] DEBUG [django.db.backends:89] (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+[23/Dec/2015 22:36:36] DEBUG [django.db.backends:89] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+[23/Dec/2015 22:36:36] DEBUG [django.db.backends:89] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'session' AND "django_content_type"."app_label" = 'sessions'); args=('session', 'sessions')
+[23/Dec/2015 22:36:36] DEBUG [django.db.backends:89] (0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
+[23/Dec/2015 22:36:36] DEBUG [django.db.backends:89] (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+[23/Dec/2015 22:37:11] DEBUG [django.db.backends:89] (0.005) 
+[23/Dec/2015 23:00:56] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[23/Dec/2015 23:00:59] WARNING [django.request:182] Not Found: /api/directions/1587848.414,5879564.080,2&1588005.547,5879736.039,2
+[23/Dec/2015 23:00:59] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[23/Dec/2015 23:00:59] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'maps.urls' from '/vagrant/ch11/code/web_analysis/maps/urls.pyc'> (None:None) ^maps/>"
+[23/Dec/2015 23:00:59] ERROR [django.request:284] Internal Server Error: /api/directions/1587848.414,5879564.080,2&1588005.547,5879736.039,2/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 68, in view
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends:89] (0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('contenttypes', '0002_remove_content_type_name', '2015-12-24T02:23:01.982413+00:00'::timestamptz) RETURNING "django_migrations"."id"; args=('contenttypes', u'0002_remove_content_type_name', datetime.datetime(2015, 12, 24, 2, 23, 1, 982413, tzinfo=<UTC>))
 [24/Dec/2015 02:23:01] DEBUG [django.db.backends.schema:101] ALTER TABLE "auth_permission" ALTER COLUMN "name" TYPE varchar(255) USING "name"::varchar(255); (params [])
 [24/Dec/2015 02:23:02] DEBUG [django.db.backends:89] (0.001) ALTER TABLE "auth_permission" ALTER COLUMN "name" TYPE varchar(255) USING "name"::varchar(255); args=[]
 [24/Dec/2015 02:23:02] DEBUG [django.db.backends:89] (0.001) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[23/Dec/2015 22:37:11] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[23/Dec/2015 22:48:39] DEBUG [django.db.backends:89] (0.003) 
 [24/Dec/2015 02:23:02] DEBUG [django.db.backends:89] (0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0002_alter_permission_name_max_length', '2015-12-24T02:23:02.005684+00:00'::timestamptz) RETURNING "django_migrations"."id"; args=('auth', u'0002_alter_permission_name_max_length', datetime.datetime(2015, 12, 24, 2, 23, 2, 5684, tzinfo=<UTC>))
 [24/Dec/2015 02:23:02] DEBUG [django.db.backends.schema:101] ALTER TABLE "auth_user" ALTER COLUMN "email" TYPE varchar(254) USING "email"::varchar(254); (params [])
 [24/Dec/2015 02:23:02] DEBUG [django.db.backends:89] (0.001) ALTER TABLE "auth_user" ALTER COLUMN "email" TYPE varchar(254) USING "email"::varchar(254); args=[]
 [24/Dec/2015 02:23:02] DEBUG [django.db.backends:89] (0.001) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[23/Dec/2015 22:48:39] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[23/Dec/2015 22:48:52] WARNING [django.request:182] Not Found: /
+[23/Dec/2015 22:48:52] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[23/Dec/2015 22:48:52] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'api.urls' from '/vagrant/ch11/code/web_analysis/api/urls.pyc'> (None:None) ^api/>"
+[23/Dec/2015 22:48:52] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'maps.urls' from '/vagrant/ch11/code/web_analysis/maps/urls.pyc'> (None:None) ^maps/>"
+[23/Dec/2015 22:48:52] WARNING [django.request:182] Not Found: /favicon.ico
+[23/Dec/2015 22:48:52] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
 [24/Dec/2015 02:23:02] DEBUG [django.db.backends:89] (0.001) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('auth', '0003_alter_user_email_max_length', '2015-12-24T02:23:02.028604+00:00'::timestamptz) RETURNING "django_migrations"."id"; args=('auth', u'0003_alter_user_email_max_length', datetime.datetime(2015, 12, 24, 2, 23, 2, 28604, tzinfo=<UTC>))
 [24/Dec/2015 02:23:02] DEBUG [django.db.backends:89] (0.002) 
             SELECT c.relname, c.relkind
@@ -2558,31 +2676,6 @@
 [25/Dec/2015 06:34:13] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
 [25/Dec/2015 06:34:15] WARNING [django.request:182] Not Found: /api/
 [25/Dec/2015 06:34:15] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
-    (bit, current))  # missing attribute
-VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
-[25/Dec/2015 06:34:15] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
-    (bit, current))  # missing attribute
-VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'maps.urls' from '/vagrant/ch11/code/web_analysis/maps/urls.pyc'> (None:None) ^maps/>"
-[25/Dec/2015 06:34:15] WARNING [django.request:182] Not Found: /favicon.ico
-[25/Dec/2015 06:34:15] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
-    (bit, current))  # missing attribute
-VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
-[25/Dec/2015 06:34:15] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
-    (bit, current))  # missing attribute
-VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'api.urls' from '/vagrant/ch11/code/web_analysis/api/urls.pyc'> (None:None) ^api/>"
-[25/Dec/2015 06:34:15] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
-    (bit, current))  # missing attribute
-VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'maps.urls' from '/vagrant/ch11/code/web_analysis/maps/urls.pyc'> (None:None) ^maps/>"
 [25/Dec/2015 06:34:25] DEBUG [django.db.backends:89] (0.014)  SELECT
         verts.id as id
         FROM geodata.networklines_3857_vertices_pgr AS verts
@@ -3389,34 +3482,6 @@ LINE 1: SELECT room_num FROM geodata.search_rooms_v
                 AND pg_catalog.pg_table_is_visible(c.oid); args=None
 [26/Dec/2015 03:19:49] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
 [26/Dec/2015 03:19:59] DEBUG [django.db.backends:89] (0.001) SELECT room_num FROM geodata.search_rooms_v; args=None
-[26/Dec/2015 03:19:59] ERROR [django.request:256] Internal Server Error: /api/rooms/
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
-    return view_func(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 71, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 456, in dispatch
-    response = self.handle_exception(exc)
-  File "/usr/local/lib/python2.7/dist-packages/rest_framework/views.py", line 453, in dispatch
-    response = handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/rest_framework/decorators.py", line 50, in handler
-    return func(*args, **kwargs)
-  File "/vagrant/ch11/code/web_analysis/api/views.py", line 259, in room_list
-    cur.execute(room_query)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 79, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 62, in execute
-    return self.cursor.execute(sql)
-ProgrammingError: relation "geodata.search_rooms_v" does not exist
-LINE 1: SELECT room_num FROM geodata.search_rooms_v
-                             ^
-
 [26/Dec/2015 03:19:59] DEBUG [django.db.backends:89] (0.010)  SELECT
         verts.id as id
         FROM geodata.networklines_3857_vertices_pgr AS verts
@@ -3505,12 +3570,19 @@ LINE 1: SELECT room_num FROM geodata.search_rooms_v
           ON dij_route.id2 = input_network.ogc_fid ;
       ; args=(827, 1197)
 [26/Dec/2015 03:21:48] DEBUG [django.db.backends:89] (0.002) 
-            SELECT c.relname, c.relkind
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[23/Dec/2015 23:12:51] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[23/Dec/2015 23:13:13] WARNING [django.request:182] Not Found: /api/directions/1587848.414,5879564.080,2&1588005.547,5879736.039,2&1
+[23/Dec/2015 23:13:13] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[23/Dec/2015 23:13:13] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'maps.urls' from '/vagrant/ch11/code/web_analysis/maps/urls.pyc'> (None:None) ^maps/>"
+[23/Dec/2015 23:13:13] DEBUG [django.db.backends:89] (0.001)  SELECT
 [26/Dec/2015 03:21:48] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
 [26/Dec/2015 03:21:54] DEBUG [django.db.backends:89] (0.000) SELECT room_num FROM geodata.search_rooms_v; args=None
 [26/Dec/2015 03:21:54] DEBUG [django.db.backends:89] (0.010)  SELECT
@@ -3521,6 +3593,15 @@ LINE 1: SELECT room_num FROM geodata.search_rooms_v
         ON ST_DWithin(verts.the_geom, pt.geom, 200.0)
         ORDER BY ST_3DDistance(verts.the_geom, pt.geom)
         LIMIT 1;; args=(1587848.414, 5879564.08, 2)
+[23/Dec/2015 23:13:13] ERROR [django.request:284] Internal Server Error: /api/directions/1587848.414,5879564.080,2&1588005.547,5879736.039,2&1/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 68, in view
 [26/Dec/2015 03:21:54] ERROR [django.request:256] Internal Server Error: /api/rooms/
 Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
@@ -3535,12 +3616,33 @@ Traceback (most recent call last):
     response = handler(request, *args, **kwargs)
   File "/usr/local/lib/python2.7/dist-packages/rest_framework/decorators.py", line 50, in handler
     return func(*args, **kwargs)
+  File "/vagrant/ch11/code/web_analysis/api/views.py", line 92, in create_route
+    start_floor_num)
+  File "/vagrant/ch11/code/web_analysis/api/views.py", line 42, in find_closest_network_node
+    cur.execute(query, (x_coord, y_coord, floor,))
   File "/vagrant/ch11/code/web_analysis/api/views.py", line 259, in room_list
     cur.execute(room_query)
   File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 79, in execute
     return super(CursorDebugWrapper, self).execute(sql, params)
   File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
     return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: permission denied for schema geodata
+LINE 3:         FROM geodata.networklines_3857_vertices_pgr AS verts
+                     ^
+
+[23/Dec/2015 23:16:55] DEBUG [django.db.backends:89] (0.003) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[23/Dec/2015 23:16:55] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[23/Dec/2015 23:17:00] DEBUG [django.db.backends:89] (0.001)  SELECT
   File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
     six.reraise(dj_exc_type, dj_exc_value, traceback)
   File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 62, in execute
@@ -3667,6 +3769,15 @@ LINE 1: SELECT room_num FROM geodata.search_rooms_v
         ON ST_DWithin(verts.the_geom, pt.geom, 200.0)
         ORDER BY ST_3DDistance(verts.the_geom, pt.geom)
         LIMIT 1;; args=(1587848.414, 5879564.08, 2)
+[23/Dec/2015 23:17:00] ERROR [django.request:284] Internal Server Error: /api/directions/1587848.414,5879564.080,2&1588005.547,5879736.039,2&1/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 68, in view
 [26/Dec/2015 03:22:08] DEBUG [django.db.backends:89] (0.006)  SELECT
         verts.id as id
         FROM geodata.networklines_3857_vertices_pgr AS verts
@@ -3711,12 +3822,67 @@ Traceback (most recent call last):
     response = handler(request, *args, **kwargs)
   File "/usr/local/lib/python2.7/dist-packages/rest_framework/decorators.py", line 50, in handler
     return func(*args, **kwargs)
+  File "/vagrant/ch11/code/web_analysis/api/views.py", line 92, in create_route
+    start_floor_num)
+  File "/vagrant/ch11/code/web_analysis/api/views.py", line 42, in find_closest_network_node
+    cur.execute(query, (x_coord, y_coord, floor,))
   File "/vagrant/ch11/code/web_analysis/api/views.py", line 259, in room_list
     cur.execute(room_query)
   File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 79, in execute
     return super(CursorDebugWrapper, self).execute(sql, params)
   File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
     return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: relation "geodata.networklines_3857_vertices_pgr" does not exist
+LINE 3:         FROM geodata.networklines_3857_vertices_pgr AS verts
+                     ^
+
+[23/Dec/2015 23:25:31] WARNING [django.request:182] Not Found: /api/
+[23/Dec/2015 23:25:31] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[23/Dec/2015 23:25:31] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'maps.urls' from '/vagrant/ch11/code/web_analysis/maps/urls.pyc'> (None:None) ^maps/>"
+[23/Dec/2015 23:25:40] WARNING [django.request:182] Not Found: /
+[23/Dec/2015 23:25:40] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[23/Dec/2015 23:25:40] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'api.urls' from '/vagrant/ch11/code/web_analysis/api/urls.pyc'> (None:None) ^api/>"
+[23/Dec/2015 23:25:40] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'maps.urls' from '/vagrant/ch11/code/web_analysis/maps/urls.pyc'> (None:None) ^maps/>"
+[23/Dec/2015 23:25:46] WARNING [django.request:182] Not Found: /
+[23/Dec/2015 23:25:46] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[23/Dec/2015 23:25:46] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'api.urls' from '/vagrant/ch11/code/web_analysis/api/urls.pyc'> (None:None) ^api/>"
+[23/Dec/2015 23:25:46] DEBUG [django.template:923] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 901, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u"<RegexURLResolver <module 'maps.urls' from '/vagrant/ch11/code/web_analysis/maps/urls.pyc'> (None:None) ^maps/>"
   File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 97, in __exit__
     six.reraise(dj_exc_type, dj_exc_value, traceback)
   File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 62, in execute
