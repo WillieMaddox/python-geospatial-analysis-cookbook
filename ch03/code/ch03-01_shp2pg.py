@@ -3,15 +3,20 @@
 
 import subprocess
 
+db_host = "localhost"
+db_user = "vagrant"
+db_passwd = "vagrant0"
+db_database = "py_geoan_cb"
+db_port = "5432"
+
+# database connection string
+db_connection = """PG:host={:s} port={:s} user={:s} dbname={:s} password={:s}""".format(db_host, db_port, db_user, db_database, db_passwd)
+
 # database options
 db_schema = "SCHEMA=geodata"
 overwrite_option = "OVERWRITE=YES"
 geom_type = "MULTILINESTRING"
 output_format = "PostgreSQL"
-
-# database connection string
-db_connection = """PG:host=localhost port=5432
-	user=pluto dbname=py_geoan_cb password=stars"""
 
 # input shapefile
 input_shp = "../geodata/bikeways.shp"

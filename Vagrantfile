@@ -8,7 +8,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   if Vagrant.has_plugin?("vagrant-timezone")
     config.timezone.value = "US/Central"
   end
-
+  # Using vivid because pgrouting extension is available with apt-get.
   config.vm.box = "ubuntu/vivid64"
   config.vm.hostname = "PyGisCkBk"
   config.vm.network "forwarded_port", guest: 8000, host: 8000, auto_correct: true
@@ -28,8 +28,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 #  config.vm.provision :shell, inline: "hostnamectl set-hostname PyGisCkBk"
 
 #  config.vm.provision :shell, :privileged => false, :path => "installer_old.sh"
-  config.vm.provision :shell, :path => "installer.sh"
-  config.vm.provision :shell, :path => "ch03/setup.sh"
+#  config.vm.provision :shell, :path => "installer.sh"
+#  config.vm.provision :shell, :path => "ch03/setup0.sh"
+#  config.vm.provision :shell, :path => "ch03/setup.sh"
   config.vm.provision :shell, :path => "ch08/setup.sh"
   config.vm.provision :shell, :path => "ch11/setup.sh"
 

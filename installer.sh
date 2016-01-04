@@ -37,7 +37,7 @@ pip install shapely
 pip install pyshp
 pip install geojson
 #pip install pandas
-#pip install scipy
+pip install scipy
 pip install networkx
 #pip install pysal
 pip install ipython

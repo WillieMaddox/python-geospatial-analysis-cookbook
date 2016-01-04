@@ -13,8 +13,8 @@ output_shp = "../geodata/cadaster_raster"
 shp_driver = ogr.GetDriverByName("ESRI Shapefile")
 
 # create output file name
-output_shapefile = shp_driver.CreateDataSource( output_shp + ".shp" )
-new_shapefile = output_shapefile.CreateLayer(output_shp, srs = None )
+output_shapefile = shp_driver.CreateDataSource(output_shp+'.shp')
+new_shapefile = output_shapefile.CreateLayer(output_shp)
 
 gdal.Polygonize(input_band, None, new_shapefile, -1, [], callback=None)
 new_shapefile.SyncToDisk()

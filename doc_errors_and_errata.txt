@@ -25,6 +25,66 @@ page 17
 ### ch03 ###
 ############
 
+page 51
+In the second paragraph under "How it works...",
+"This does not always work and some errors can occur."
+And of course this didn't work for me. In particular with the bikeways.shp:
+ERROR:  Geometry type (MultiLineString) does not match column type (LineString)
+Either providing a recipe that does work, or providing an alternate solution
+would be a welcomed addition.
+For example, if using gdal v1.10 or later (which the book prescribes anyway),
+then replace geometry_name with "PROMOTE_TO_MULTI" in the ogr2ogr Subprocess call.
+
+page 52 step 1
+Neither the python description nor the ogr2ogr command line script works:
+running ogr2ogr on table: bikeways
+ERROR 1: No field definitions found for 'bikeways', is it a table?
+FAILURE: Couldn't fetch requested layer 'bikeways'!
+running ogr2ogr on table: highest_mountains
+ERROR 1: No field definitions found for 'highest_mountains', is it a table?
+FAILURE: Couldn't fetch requested layer 'highest_mountains'!
+Note: I had to prefix with geodata.highest_mountains for it to work.
+
+page 53 step 1
+What is mydatadump?
+What is neighborhood?
+What is parcels?
+This discription of the commandline ogr2ogr command is vague and does not offer any useful insight.
+
+page 55
+Lots of warnings when importing osm files. Whether it be from osm web site, or using the san fran
+file that comes with the downloadable code for the book. For example,
+###############################
+Had to open data source read-only.
+INFO: Open of `../geodata/map_sanfran.osm'
+      using driver `OSM' successful.
+1: points (Point)
+2: lines (Line String)
+3: multilinestrings (Multi Line String)
+4: multipolygons (Multi Polygon)
+5: other_relations (Geometry Collection)
+removing existing directory : /vagrant/ch03/geodata/temp
+creating new directory : /vagrant/ch03/geodata/temp
+Warning 1: Value '"alt_name"=>"Doyle Drive","bicycle"=>"no","hgv"=>"designated","hgv:state_network"=>"yes","lanes"=>"5","lit"=>"yes","maxspeed"=>"35 mph","NHS"=>"STRAHNET","note:lanes"=>"center lanes are reversible, so number may be different","oneway"=>"yes","ref"=>"US 101;CA 1","source:hgv:state_network"=>"Caltrans http://www.dot.ca.gov/hq/traffops/trucks/truckmap/","tiger:county"=>"San Francisco, CA","toll"=>"no"' of field other_tags has been truncated to 254 characters.
+This warning will not be emitted any more for that layer.
+done creating lines
+Warning 1: Value '"noaa:geohash"=>"468427c46684","noaa:lnam"=>"fae70fb6","noaa:taghash"=>"7ea8dbbb8b7dc3413be5e473d13e0643ab6d5ff0","seamark:buoy_special_purpose:category"=>"private;unknown_purpose","seamark:buoy_special_purpose:colour"=>"yellow","seamark:buoy_special_purpose:shape"=>"can","seamark:name"=>"C","seamark:status"=>"private","seamark:type"=>"buoy_special_purpose"' of field other_tags has been truncated to 254 characters.
+This warning will not be emitted any more for that layer.
+done creating points
+Warning 1: Value '"is_in:state"=>"CA","network"=>"rcn","note_2"=>"ref=1 tag deleted, as Penny Gray (Caltrans) says that \"Pacific Coast Bike Route\" is official, but no number is assigned. Delete this note_2 when AASHTO designates as ncn=95.","ref"=>"PCB","relation"=>"route","route"=>"bicycle"' of field other_tags has been truncated to 254 characters.
+This warning will not be emitted any more for that layer.
+done creating multilinestrings
+Warning 6: Normalized/laundered field name: 'admin_level' to 'admin_leve'
+done creating multipolygons
+###############################
+Is this to be expected? Some discussion regarding this issue would be helpful.
+
+page 56
+In the code file ch03-04_osm2shp.py, both ogrinfo and ogr2ogr should be in quotes
+when passed as arguments to Subprocess. Windows users don't have to worry about
+this since both ogr_info and ogr2ogr are string variables.
+Also, defining ogrinfo as ogr_info is a recipe for a bug.
+
 page 67
 8. Let's run our new ch03-08_dem2heightmap.py script from the command line:
 subprocess.call(tif_2_envi.split(),shell=False)
@@ -36,6 +96,17 @@ probably should read,
 subprocess.call(tif_2_envi.split(),shell=False) <-- not in bold
 8. Let's run our new ch03-08_dem2heightmap.py script from the command line:
 python ch03-08_dem2heightmap.py
+
+.bin is not an extension Blender understands.
+
+############
+### ch04 ###
+############
+
+page 87 step 1 and 2.
+postgres password was "secret" (p.49) now it's "air"
+Why the sudden change?
+
 
 ############
 ### ch06 ###
