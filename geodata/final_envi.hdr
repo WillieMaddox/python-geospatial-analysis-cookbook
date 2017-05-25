@@ -1,0 +1,14 @@
+ENVI
+description = {
+../../geodata/final_envi.bin}
+samples = 500
+lines   = 500
+bands   = 1
+header offset = 0
+file type = ENVI Standard
+data type = 12
+interleave = bsq
+byte order = 0
+map info = {Unknown, 1, 1, 477199.5, 189600.5, 10, 10, 0, North}
+band names = {
+Band 1}
