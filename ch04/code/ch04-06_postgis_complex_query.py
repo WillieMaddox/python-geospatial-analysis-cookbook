@@ -58,9 +58,13 @@ for each_result in validity_results:
     dist_city_to_golf = each_result[4]
     dist_park_to_golf = each_result[5]
     geoj_geom = loads(geom)
-    myfeat = Feature(geometry=geoj_geom, properties={'city': city_name, 'golf_course': course_name,
-												 'park_name': park_name, 'dist_to city': dist_city_to_golf,
-												 'dist_to_park': dist_park_to_golf})
+    myfeat = Feature(geometry=geoj_geom,
+                     properties={'city': city_name,
+                                 'golf_course': course_name,
+                                 'park_name': park_name,
+                                 'dist_to city': dist_city_to_golf,
+                                 'dist_to_park': dist_park_to_golf}
+                     )
     new_geom_collection.append(	myfeat)  # use the geojson module to create the final Feature Collection of features created from for loop above
 
 my_geojson = FeatureCollection(new_geom_collection)

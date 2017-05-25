@@ -1,6 +1,7 @@
 # This is an auto-generated Django model module created by ogrinspect.
 from django.contrib.gis.db import models
 
+
 class TexasBorder(models.Model):
     filename = models.CharField(max_length=254)
     pt_count = models.IntegerField()
@@ -12,10 +13,10 @@ class TexasBorder(models.Model):
 
 # Auto-generated `LayerMapping` dictionary for TexasBorder model
 texasborder_mapping = {
-    'filename' : 'FileName',
-    'pt_count' : 'Pt_Count',
-    'pt_spacing' : 'Pt_Spacing',
-    'z_min' : 'Z_Min',
-    'z_max' : 'Z_Max',
-    'geom' : 'MULTIPOLYGON',
+    'filename': 'FileName',
+    'pt_count': 'Pt_Count',
+    'pt_spacing': 'Pt_Spacing',
+    'z_min': 'Z_Min',
+    'z_max': 'Z_Max',
+    'geom': 'MULTIPOLYGON',
 }
