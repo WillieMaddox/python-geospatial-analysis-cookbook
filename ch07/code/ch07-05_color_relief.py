@@ -6,21 +6,23 @@ dem_file = '../geodata/092j02_0200_demw.dem'
 hillshade_relief = '../geodata/hillshade.tif'
 relief = '../geodata/relief.tif'
 final_color_relief = '../geodata/final_color_relief.tif'
+slope_file = '../geodata/slope_w-degrees.tif'
 
-create_hillshade = 'gdaldem hillshade -co compress=lzw -compute_edges ' + dem_file +  ' ' + hillshade_relief
-subprocess.call(create_hillshade, shell=True)
+create_hillshade = 'gdaldem hillshade -co compress=lzw -compute_edges ' + dem_file + ' ' + hillshade_relief
 print create_hillshade
 
 cr = 'gdaldem color-relief -co compress=lzw ' + dem_file + ' ramp.txt ' + relief
-subprocess.call(cr)
 print cr
 
 merge = 'python hsv_merge.py ' + relief + ' ' + hillshade_relief + ' ' + final_color_relief
-subprocess.call(merge)
 print merge
 
-create_slope = '''gdaldem slope -co compress=lzw ../geodata/092j02_0200_demw.dem ../geodata/slope_w-degrees.tif '''
+create_slope = 'gdaldem slope -co compress=lzw ' + dem_file + ' ' + slope_file
+print create_slope
 
+subprocess.call(create_hillshade, shell=True)
+subprocess.call(cr)
+subprocess.call(merge)
 subprocess.call(create_slope)
 
 
