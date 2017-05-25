@@ -1,7 +1,8 @@
-#from django.db import models
+# from django.db import models
 from django.contrib.gis.db import models
 
 # Create your models here.
+
 
 class WorldBorder(models.Model):
     # Regular Django fields corresponding to the attributes in the
